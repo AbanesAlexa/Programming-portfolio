@@ -67,3 +67,78 @@ footer { display:flex; justify-content:space-between; gap:12px; padding:20px 0 2
  .term-grid,.activity-list{grid-template-columns:1fr}.section-heading{align-items:start;gap:15px;flex-direction:column}
  footer{flex-direction:column}
 }
+
+/* ABOUT ME, LEARNING JOURNEY, AND SKILLS */
+
+.profile-section {
+  padding: 25px 0 55px;
+}
+
+.profile-box {
+  padding: 28px 32px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: #65717a;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.profile-box p {
+  margin: 0 0 15px;
+}
+
+.profile-box p:last-child {
+  margin-bottom: 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.skill-card {
+  padding: 23px;
+  background: #e8efed;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.skill-card:nth-child(2),
+.skill-card:nth-child(3) {
+  background: #fffdf8;
+}
+
+.skill-card h3,
+.goal-box h3 {
+  margin: 12px 0 8px;
+  font: 600 22px "Playfair Display", serif;
+}
+
+.skill-card p,
+.goal-box p {
+  margin: 0;
+  color: #69757a;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.goal-box {
+  margin-top: 18px;
+  padding: 28px;
+  background: #f1e4d8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+@media(max-width:650px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-box,
+  .goal-box {
+    padding: 22px;
+  }
+}
