@@ -1,0 +1,69 @@
+* { box-sizing: border-box; }
+:root { --ink:#202b35; --muted:#77818a; --paper:#f5f1e8; --line:#d9d2c5; --orange:#c8754c; --blue:#dce8e9; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; }
+.page-wrap { max-width:1080px; margin:auto; padding:0 34px; }
+.topbar { height:76px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+.brand { color:var(--ink); text-decoration:none; font:500 12px "DM Mono",monospace; letter-spacing:1.5px; }
+.brand-mark { display:inline-grid; place-items:center; width:28px; height:28px; margin-right:8px; border:1px solid var(--ink); border-radius:50%; }
+.nav-note,.eyebrow,.field-label,.ticket-type,.section-count,.card-tag,.card-bottom,footer,.stub-caption { font-family:"DM Mono",monospace; letter-spacing:1.2px; }
+.nav-note { font-size:10px; color:var(--muted); }
+.dot { display:inline-block; width:6px; height:6px; margin-left:8px; background:#78947b; border-radius:50%; }
+.hero { padding:78px 0 70px; }
+.eyebrow { display:flex; align-items:center; gap:10px; color:var(--orange); font-size:10px; }
+.eyebrow-line { width:28px; height:1px; background:var(--orange); }
+h1 { margin:20px 0 14px; font:700 clamp(48px,8vw,82px)/.98 "Playfair Display",serif; letter-spacing:-2px; }
+h1 em { color:var(--orange); font-weight:600; }
+.intro { max-width:490px; color:#65717a; line-height:1.7; font-size:14px; }
+.ticket { display:grid; grid-template-columns:1fr 180px; max-width:850px; margin:48px auto 0; background:#fffdf8; border:1px solid #d7d0c3; border-radius:9px; box-shadow:0 18px 45px #35404b12; overflow:hidden; transform:rotate(-1deg); }
+.ticket-main { padding:28px 34px 25px; }
+.ticket-head { display:flex; justify-content:space-between; align-items:center; padding-bottom:22px; border-bottom:1px dashed #cfc8bb; }
+.airline { font:500 12px "DM Mono",monospace; letter-spacing:1.5px; }
+.plane-icon { color:var(--orange); font-size:20px; margin-right:9px; }
+.ticket-type,.field-label { display:block; color:#92999b; font-size:9px; }
+.route { display:grid; grid-template-columns:1fr 1fr 1.2fr; align-items:center; gap:14px; padding:25px 0 22px; }
+.route strong { display:block; margin-top:8px; font:600 15px "DM Mono",monospace; }
+.route-line { display:flex; align-items:center; color:var(--orange); font-size:18px; }
+.route-line span { height:1px; flex:1; background:#cfc8bb; }
+.destination { text-align:right; }
+.ticket-details { display:grid; grid-template-columns:repeat(3,1fr); padding-top:18px; border-top:1px dashed #cfc8bb; }
+.ticket-details strong { display:block; margin-top:7px; font:500 11px "DM Mono",monospace; }
+.ticket-stub { display:flex; flex-direction:column; justify-content:center; align-items:center; padding:20px; background:#e8efed; border-left:1px dashed #c5cfca; }
+.ticket-stub strong { margin:8px 0 25px; font:700 25px "Playfair Display",serif; }
+.barcode { width:100px; height:43px; background:repeating-linear-gradient(90deg,#26353c 0 2px,transparent 2px 4px,#26353c 4px 5px,transparent 5px 8px); }
+.stub-caption { margin-top:12px; color:#7c8986; font-size:8px; }
+.term-section { padding:25px 0 85px; }
+.section-heading { display:flex; justify-content:space-between; align-items:end; margin-bottom:22px; }
+h2 { margin:8px 0 0; font:600 34px "Playfair Display",serif; }
+.section-count { color:var(--muted); font-size:9px; }
+.term-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.term-card { min-height:285px; padding:23px 25px 18px; display:flex; flex-direction:column; color:var(--ink); text-decoration:none; border:1px solid var(--line); border-radius:8px; transition:transform .2s,box-shadow .2s; }
+.term-card:hover { transform:translateY(-5px); box-shadow:0 14px 30px #35404b12; }
+.midterm { background:#e8efed; }
+.finals { background:#f1e4d8; }
+.card-top,.card-bottom { display:flex; justify-content:space-between; align-items:center; }
+.folder-icon { font-size:28px; }
+.card-tag { font-size:9px; color:#7d8988; }
+.card-body { margin:auto 0; }
+.card-body h3 { margin:8px 0; font:600 31px/1.05 "Playfair Display",serif; }
+.card-body p { max-width:270px; color:#69757a; font-size:12px; line-height:1.6; }
+.card-bottom { padding-top:15px; border-top:1px solid #aab7b2; font-size:9px; }
+.arrow { font:22px "DM Sans",sans-serif; }
+footer { display:flex; justify-content:space-between; gap:12px; padding:20px 0 28px; border-top:1px solid var(--line); color:#92999b; font-size:8px; }
+.subpage { min-height:100vh; }
+.back-link { display:inline-block; margin:38px 0 24px; color:var(--orange); text-decoration:none; font:11px "DM Mono",monospace; letter-spacing:1px; }
+.page-title { margin:0; font:600 clamp(38px,7vw,62px)/1.05 "Playfair Display",serif; }
+.page-description { color:#68747b; font-size:14px; line-height:1.7; max-width:540px; }
+.activity-list { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:36px 0 70px; }
+.activity { display:block; padding:20px; border:1px solid var(--line); border-radius:7px; background:#fffdf8; color:var(--ink); text-decoration:none; }
+.activity:hover { border-color:var(--orange); }
+.activity small { color:var(--orange); font:10px "DM Mono",monospace; }
+.activity h2 { font:600 20px "Playfair Display",serif; margin:10px 0 5px; }
+.activity p { margin:0; color:#77818a; font-size:12px; }
+.work-box { margin:32px 0 70px; padding:26px; background:#fffdf8; border:1px solid var(--line); border-radius:8px; line-height:1.7; }
+@media(max-width:650px) {
+ .page-wrap{padding:0 19px}.nav-note{font-size:8px}.hero{padding:55px 0 45px}
+ .ticket{grid-template-columns:1fr;transform:none}.ticket-stub{border-left:0;border-top:1px dashed #c5cfca;min-height:115px}
+ .route{grid-template-columns:1fr;gap:18px}.route-line{display:none}.destination{text-align:left}
+ .term-grid,.activity-list{grid-template-columns:1fr}.section-heading{align-items:start;gap:15px;flex-direction:column}
+ footer{flex-direction:column}
+}
